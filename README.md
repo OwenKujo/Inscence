@@ -1,11 +1,11 @@
-**# [AI Digital Marketing]**
+**# [Inscence]**
 
 This README provides instructions for setting up and running your React and
-Python project.
+Node project.
 
 ## Prerequisites
 
--   **Python and pip**
+-   **React Vite and npm**
 -   **Node.js and npm (or yarn):** Ensure you have Node.js and npm (or yarn)
     installed on your system. You can download them from the official website:
     [https://nodejs.org/en](https://nodejs.org/en)
