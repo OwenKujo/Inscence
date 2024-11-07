@@ -49,7 +49,7 @@ const Navbar = () => {
             </nav>
 
             {/* Sidebar Menu for small screens */}
-            <div className={`fixed top-[63px] left-0 h-full bg-white shadow-lg z-50 transform ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out w-[65%] sm:w-1/2 lg:hidden`}>
+            <div className={`fixed top-[64px] left-0 h-full bg-white shadow-lg z-50 transform ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out w-[65%] sm:w-1/2 lg:hidden`}>
                 <div className="flex flex-col p-4 h-full">
                     
                     {/* Close Button inside Sidebar */}
