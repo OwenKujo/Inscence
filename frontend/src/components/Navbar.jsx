@@ -29,33 +29,33 @@ const Navbar = () => {
     return (
         <div>
             {/* Top Navbar */}
-            <nav className="bg-gray-800 text-white fixed w-full z-40 flex justify-between items-center px-4 h-16">
+            <nav className="text-[#4c4e4f] font-body shadow-gray-400 fixed w-full z-40 flex justify-between items-center px-4 h-16 border">
                 <div className="text-xl font-semibold">Logo</div>
                 
                 {/* Hamburger Menu Button for small screens */}
                 <button onClick={toggleMenu} className="md:hidden text-white text-2xl focus:outline-none">
-                    {isMenuOpen ? <FiX /> : <FiMenu />}
+                    {isMenuOpen ? <FiX className='text-[#4c4e4f]' /> : <FiMenu className='text-[#4c4e4f]' />}
                 </button>
 
                 {/* Desktop Navigation */}
                 <div className="hidden md:flex space-x-4">
                     {navLists.map((list, index) => (
-                        <a href={list.path} key={index} className="flex items-center space-x-2 px-3 py-2 rounded-md hover:bg-gray-700 transition">
+                        <a href={list.path} key={index} className="flex items-center space-x-2 px-3 py-2 hover:text-[#24BAEC] rounded-md transition">
                             {list.icon}
-                            <span>{list.name}</span>
+                            <span className='text-[7D848D]'>{list.name}</span>
                         </a>
                     ))}
                 </div>
             </nav>
 
             {/* Sidebar Menu for small screens */}
-            <div className={`fixed top-0 left-0 h-full bg-white shadow-lg z-50 transform ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out w-3/4 sm:w-1/2 lg:hidden`}>
+            <div className={`fixed top-[63px] left-0 h-full bg-white shadow-lg z-50 transform ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out w-[65%] sm:w-1/2 lg:hidden`}>
                 <div className="flex flex-col p-4 h-full">
                     
                     {/* Close Button inside Sidebar */}
-                    <button onClick={toggleMenu} className="self-end text-gray-800 mb-4">
+                    {/* <button onClick={toggleMenu} className="self-end text-gray-800 mb-4">
                         <FiX className="h-6 w-6" />
-                    </button>
+                    </button> */}
 
                     {/* Sidebar Navigation Links */}
                     <ul className="flex flex-col space-y-4 text-lg">
@@ -64,9 +64,8 @@ const Navbar = () => {
                                 scrollToSection(list.section);
                                 toggleMenu();
                             }}>
-                                <button className="flex items-center space-x-2 text-gray-800 hover:font-semibold duration-100">
-                                    {list.icon}
-                                    <span>{list.name}</span>
+                                <button className="flex items-center space-x-2 text-[#4c4e4f] hover:text-[#24BAEC] duration-100">
+                                    <a className='flex gap-4 items-center' href={list.path}>{list.icon}<span>{list.name}</span></a>      
                                 </button>
                             </li>
                         ))}
