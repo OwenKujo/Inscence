@@ -19,7 +19,6 @@ Node project.
 
     ```bash
     cd frontend
-    cd inscene-proj
     npm install (or yarn install)
     ```
 
@@ -49,7 +48,6 @@ Node project.
 
     
     cd frontend
-    cd inscene-proj
     npm run dev
     
 
