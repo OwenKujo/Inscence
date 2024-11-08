@@ -15,7 +15,7 @@ const Profile_user = () => {
       {/* กรอบข้อมูล */}
       <div className='flex flex-row items-center justify-start gap-4'>
         {/* รูป Profile */}
-        <img src={test_user} alt="user_test" className='w-[52px] h-[52px] object-cover rounded-full' />
+        <img src={test_user} alt="user_test" className='w-[52px] h-[52px] object-cover rounded-full border-[2px] border-[#50cbf5]' />
         {/* ข้อมูล */}
         <div className='flex flex-col'>
           <span className='text-[#50cbf5] text-[16px] font-body4 font-bold flex gap-1'>Hi <img src={emoji_hi} alt="" className='w-[20px] h-[20px] items-center' />,</span>
