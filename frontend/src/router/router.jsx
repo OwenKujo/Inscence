@@ -15,6 +15,18 @@ const router = createBrowserRouter([
           path: "/community",
           element: <Community/>
         },
+        {
+          path: "/search",
+          element: <Community/>
+        },
+        {
+          path: "/messages",
+          element: <Community/>
+        },
+        {
+          path: "/profile",
+          element: <Community/>
+        },
       ]
     },
   ]);

@@ -31,7 +31,7 @@ const Navbar = () => {
     return (
         <div>
             {/* Top Navbar */}
-            <nav className="text-[#4c4e4f] font-body shadow-gray-400 fixed w-full z-40 flex justify-between items-center px-4 h-16 border">
+            <nav className="text-[#4c4e4f] font-body bg-white shadow-gray-400 fixed w-full z-40 flex justify-between items-center px-4 h-16 border">
                 <div className="text-xl font-semibold object-cover items-center">
                     <img src={Logo} alt="Logo" className='w-full h-[45px]'/>
                 </div>

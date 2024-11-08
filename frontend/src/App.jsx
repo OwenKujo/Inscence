@@ -3,6 +3,9 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Home from './page/Home';
 import Community from './page/Community';
+import Search from './page/Search';
+import Messages from './page/Messages';
+import Profile from './page/Profile';
 
 // Create the router with future flags enabled
 function App() {
@@ -20,6 +23,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/community" element={<Community />} />
+          <Route path="/search" element={<Search />} />
+          <Route path="/messages" element={<Messages />} />
+          <Route path="/profile" element={<Profile/>} />
         </Routes>
         </main>
       </div>
