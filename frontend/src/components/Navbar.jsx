@@ -6,6 +6,8 @@ import { AiOutlineMessage } from "react-icons/ai";
 import { HiOutlineUser } from "react-icons/hi2";
 import { FiMenu, FiX } from "react-icons/fi";
 
+import Logo from '../assets/Logo/Logo1.svg';
+
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -30,7 +32,9 @@ const Navbar = () => {
         <div>
             {/* Top Navbar */}
             <nav className="text-[#4c4e4f] font-body shadow-gray-400 fixed w-full z-40 flex justify-between items-center px-4 h-16 border">
-                <div className="text-xl font-semibold">Logo</div>
+                <div className="text-xl font-semibold object-cover items-center">
+                    <img src={Logo} alt="Logo" className='w-full h-[45px]'/>
+                </div>
                 
                 {/* Hamburger Menu Button for small screens */}
                 <button onClick={toggleMenu} className="md:hidden text-white text-2xl focus:outline-none">

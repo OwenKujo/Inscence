@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar';
 import Home from './page/Home';
+import Community from './page/Community';
 
 // Create the router with future flags enabled
 function App() {
@@ -15,9 +16,10 @@ function App() {
       <div className='min-h-screen flex'>
       <Navbar />
 
-        <main className='flex-1 mt-[60px]'>
+        <main className='flex-1 mt-[60px] p-4'>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/community" element={<Community />} />
         </Routes>
         </main>
       </div>

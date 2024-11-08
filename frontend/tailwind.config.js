@@ -9,6 +9,7 @@ export default {
     fontFamily: {
       body : ['Inter', 'sans-serif'],
       body2 : ['Athiti', 'sans-serif'],
+      body3 : ['Playwrite GB S', 'sans-serif'],
     }
   },
   plugins: [],
