@@ -25,7 +25,7 @@ const Card_recommend = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="container mx-auto font-body">
+    <div className="container mx-auto font-body4">
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
         {dramaData.map((item) => (
           <div
@@ -42,7 +42,7 @@ const Card_recommend = () => {
             </div>
             
             <div className="p-2">
-              <h3 className="text-[13.5px] font-semibold text-[#000000] mb-2">
+              <h3 className="text-[14px] font-bold text-[#000000] mb-2">
                 {item.title}
               </h3>
               
@@ -67,7 +67,7 @@ const Card_recommend = () => {
                     d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                   />
                 </svg>
-                <span className="text-[13px]">{item.location}</span>
+                <span className="text-[13px] font-medium">{item.location}</span>
               </div>
             </div>
           </div>

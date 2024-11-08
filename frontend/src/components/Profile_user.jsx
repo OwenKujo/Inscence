@@ -1,24 +1,28 @@
 import React from 'react'
 
 import test_user from '../assets/test_user/Alice.svg';
+import emoji_hi from '../assets/recommend/emoji_hi.png';
 
 const Profile_user = () => {
-    // ข้อมูลแบบ hardcoded
-    const user = {
-        name: "Arya Muller"
-    };
+  // ข้อมูลแบบ hardcoded
+  const user = {
+    name: "Arya Muller"
+  };
 
-    return (
+  return (
 
-      <div className="font-body">
-        {/* กรอบข้อมูล */}
-        <div className='flex flex-row items-center justify-start gap-2'>
-            {/* รูป Profile */}
-            <img src={test_user} alt="user_test" className='w-[37px] h-[37px] object-cover rounded-full'/>
-            {/* ข้อมูล */}
-            <p className="text-[#1E1E1E] text-[14px] font-medium"><span className='text-[#50cbf5]'>Hello. </span>{user.name}</p>
+    <div className="font-body4">
+      {/* กรอบข้อมูล */}
+      <div className='flex flex-row items-center justify-start gap-4'>
+        {/* รูป Profile */}
+        <img src={test_user} alt="user_test" className='w-[52px] h-[52px] object-cover rounded-full' />
+        {/* ข้อมูล */}
+        <div className='flex flex-col'>
+          <span className='text-[#50cbf5] text-[16px] font-body4 font-bold flex gap-1'>Hi <img src={emoji_hi} alt="" className='w-[20px] h-[20px] items-center' />,</span>
+          <p className="text-[#1E1E1E] text-[16px] font-body4 font-bold">{user.name}</p>
         </div>
       </div>
+    </div>
   )
 }
 

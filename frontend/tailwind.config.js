@@ -10,6 +10,7 @@ export default {
       body : ['Inter', 'sans-serif'],
       body2 : ['Athiti', 'sans-serif'],
       body3 : ['Playwrite GB S', 'sans-serif'],
+      body4 : ['Nunito']
     }
   },
   plugins: [],

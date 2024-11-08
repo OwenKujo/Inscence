@@ -9,8 +9,8 @@ const Home = () => {
       {/* user */}
       <Profile_user />
       {/* Recommend */}
-      <div className='mt-[15px]'>
-          <h1 className='text-[20px] font-body font-semibold text-[#000000] mb-4'>
+      <div className='mt-[20px]'>
+          <h1 className='text-[20px] font-body4 font-bold text-[#000000] mb-4'>
             Recommend Movies categories
           </h1>
           <div className="gap-6">
@@ -19,7 +19,7 @@ const Home = () => {
       </div>
       {/* All Show */}
       <div className='mt-[15px]'>
-          <h1 className='text-[20px] font-body font-semibold text-[#000000] mb-4'>
+          <h1 className='text-[20px] font-body4 font-bold text-[#000000] mb-4'>
             All Show
           </h1>
           <div className="gap-6">
