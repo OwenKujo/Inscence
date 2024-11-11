@@ -11,7 +11,7 @@ const Profile_user = () => {
 
   return (
 
-    <div className="font-body4">
+    <div className="font-body">
       {/* กรอบข้อมูล */}
       <div className='flex flex-row items-center justify-start gap-4'>
         {/* รูป Profile */}
