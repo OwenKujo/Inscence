@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { IoMdStar } from "react-icons/io";
 
 import img1 from '../assets/sunset_about_you/img1.svg';
 import img2 from '../assets/sunset_about_you/img2.svg';
@@ -14,28 +15,32 @@ const dramaData = [
     title: "Laem Ka Beach",
     location: "Mueang Phuket, Phuket",
     image: img1,
-    path: "/about_you/"
+    path: "/about_you/test",
+    rating: 4.8,
   },
   {
     id: 2,
     title: "Thanon Talang",
     location: "Soi Romanee, Phuket",
     image: img6,
-    path: "/about_you/"
+    path: "/about_you/",
+    rating: 4.7,
   },
   {
     id: 3,
     title: "Dibuk Restaurant",
     location: "Mueang Phuket, Phuket",
     image: img5,
-    path: "/about_you/"
+    path: "/about_you/",
+    rating: 4.5,
   },
   {
     id: 4,
     title: "On On Hotel",
     location: "The Memory at On On Hotel, Phuket",
     image: img4,
-    path: "/about_you/"
+    path: "/about_you/",
+    rating: 4.3,
   },
 ];
 
@@ -59,14 +64,14 @@ const Card_Sunset_About_You = () => {
               />
             </div>
             
-            <div className="p-2">
-              <h3 className="text-[13.5px] font-bold text-[#000000] mb-2">
+            <div className="p-3">
+              <h3 className="text-[14px] font-bold text-[#000000] mb-1">
                 {item.title}
               </h3>
               
-              <div className="flex items-center text-gray-600">
+              <div className="flex items-center text-gray-600 mb-1">
                 <svg
-                  className="w-4 h-4 mr-[4px]"
+                  className="w-4 h-4 mr-1"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -86,6 +91,11 @@ const Card_Sunset_About_You = () => {
                   />
                 </svg>
                 <span className="text-[13px] font-medium">{item.location}</span>
+              </div>
+
+              <div className="flex flex-row items-center mt-2">
+                <IoMdStar className="text-[#FFD336] mr-1 text-[18px]" />
+                <span className="text-[13px] font-medium text-[#858B94] pt-1">{item.rating}</span>
               </div>
             </div>
           </div>
