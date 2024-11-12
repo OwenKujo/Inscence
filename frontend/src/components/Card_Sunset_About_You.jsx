@@ -1,27 +1,45 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import img1 from '../assets/recommend/img1.svg';
-import img2 from '../assets/recommend/img2.svg';
+import img1 from '../assets/sunset_about_you/img1.svg';
+import img2 from '../assets/sunset_about_you/img2.svg';
+import img3 from '../assets/sunset_about_you/img3.svg';
+import img4 from '../assets/sunset_about_you/img4.svg';
+import img5 from '../assets/sunset_about_you/img5.svg';
+import img6 from '../assets/sunset_about_you/img6.svg';
 
 const dramaData = [
   {
     id: 1,
-    title: "I Tell Sunset About You",
-    location: "Phuket, Thailand",
+    title: "Laem Ka Beach",
+    location: "Mueang Phuket, Phuket",
     image: img1,
-    path: "/about_you"
+    path: "/about_you/"
   },
   {
     id: 2,
-    title: "Be My Favorite",
-    location: "Bangkok, Thailand",
-    image: img2,
-    path: "/my_favorite"
-  }
+    title: "Thanon Talang",
+    location: "Soi Romanee, Phuket",
+    image: img6,
+    path: "/about_you/"
+  },
+  {
+    id: 3,
+    title: "Dibuk Restaurant",
+    location: "Mueang Phuket, Phuket",
+    image: img5,
+    path: "/about_you/"
+  },
+  {
+    id: 4,
+    title: "On On Hotel",
+    location: "The Memory at On On Hotel, Phuket",
+    image: img4,
+    path: "/about_you/"
+  },
 ];
 
-const Card_recommend = () => {
+const Card_Sunset_About_You = () => {
   const navigate = useNavigate();
 
   return (
@@ -48,7 +66,7 @@ const Card_recommend = () => {
               
               <div className="flex items-center text-gray-600">
                 <svg
-                  className="w-4 h-4 mr-1"
+                  className="w-4 h-4 mr-[4px]"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -77,4 +95,4 @@ const Card_recommend = () => {
   );
 };
 
-export default Card_recommend;
+export default Card_Sunset_About_You;
