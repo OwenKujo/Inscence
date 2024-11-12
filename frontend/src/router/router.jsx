@@ -6,7 +6,8 @@ import Search from "../page/Search";
 import Messages from "../page/Messages";
 import Profile from "../page/Profile";
 import App from "../App";
-import About_You from "../page/About_You";
+import About_You from "../page/page_of_recommend/About_You";
+import My_favorite from "../page/page_of_recommend/My_favorite";
 
 const router = createBrowserRouter([
   {
@@ -34,10 +35,13 @@ const router = createBrowserRouter([
         element: <Profile />
       },
       {
-        // path: "/about_you", 
         path: "/about_you",
-        element: <About_You />
-      }
+        element: <About_You/>
+      },
+      {
+        path: "/my_favorite",
+        element: <My_favorite/>
+      },
     ]
   }
 ]);

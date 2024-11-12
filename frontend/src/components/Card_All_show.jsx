@@ -9,45 +9,45 @@ import img4 from '../assets/recommend/img4.svg';
 const dramaData = [
   {
     id: 1,
-    title: "Step by Ste",
+    title: "Step by Step",
     location: "Chon Buri, Thailand",
     image: img3,
-    path: "/about_you"
+    path: "/step_by_step"
   },
   {
     id: 2,
     title: "Cutie Pie",
     location: "Bangkok, Thailand",
     image: img4,
-    path: "/my_favorite"
+    path: "/cutie_pie"
   },
   {
     id: 3,
-    title: "Step by Step",
+    title: "Journey to the South",
     location: "Phuket, Thailand",
     image: img1,
-    path: "/about_you"
+    path: "/journey_south"
   },
   {
     id: 4,
-    title: "Cutie Pie",
+    title: "Love in Bangkok",
     location: "Bangkok, Thailand",
     image: img2,
-    path: "/my_favorite"
+    path: "/love"
   },
   {
     id: 5,
     title: "I Tell Sunset About You",
-    location: "Phuket, Thailand",
-    image: img1,
-    path: "/about_you"
+    location: "Krabi, Thailand",
+    image: img2,
+    path: "/sunset"
   },
   {
     id: 6,
     title: "Be My Favorite",
-    location: "Bangkok, Thailand",
+    location: "Chiang Mai, Thailand",
     image: img2,
-    path: "/my_favorite"
+    path: "/favorite"
   }
 ];
 
@@ -55,7 +55,7 @@ const Card_All_show = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="container mx-auto font-body4">
+    <div className="container mx-auto font-body">
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
         {dramaData.map((item) => (
           <div
@@ -72,7 +72,7 @@ const Card_All_show = () => {
             </div>
             
             <div className="p-2">
-              <h3 className="text-[14px] font-bold text-[#000000] mb-2">
+              <h3 className="text-[13.5px] font-bold text-[#000000] mb-2">
                 {item.title}
               </h3>
               
