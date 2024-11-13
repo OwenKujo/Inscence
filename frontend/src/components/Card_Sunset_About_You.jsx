@@ -15,7 +15,7 @@ const dramaData = [
     title: "Laem Ka Beach",
     location: "Mueang Phuket, Phuket",
     image: img1,
-    path: "/about_you/test",
+    path: "/about_you/laem_ka_beach",
     rating: 4.8,
   },
   {

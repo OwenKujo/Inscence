@@ -1,7 +1,7 @@
 import React from 'react'
 import Card_Sunset_About_You from '../../components/Card_Sunset_About_You'
 
-const About_You = () => {
+const About_You_test = () => {
   return (
     <div>
       <p className='text-[20px] font-body font-bold text-[#000000]'>Recommend location from </p>
@@ -13,4 +13,4 @@ const About_You = () => {
   )
 }
 
-export default About_You
+export default About_You_test
