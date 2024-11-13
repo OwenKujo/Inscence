@@ -23,7 +23,7 @@ const dramaData = [
     title: "Thanon Talang",
     location: "Soi Romanee, Phuket",
     image: img6,
-    path: "/about_you/test",
+    path: "/about_you/thanon_talang",
     rating: 4.7,
   },
   {
@@ -31,7 +31,7 @@ const dramaData = [
     title: "Dibuk Restaurant",
     location: "Mueang Phuket, Phuket",
     image: img5,
-    path: "/about_you/test",
+    path: "/about_you/dibuk_restaurant",
     rating: 4.5,
   },
   {
@@ -39,7 +39,7 @@ const dramaData = [
     title: "On On Hotel",
     location: "The Memory at On On Hotel, Phuket",
     image: img4,
-    path: "/about_you/test",
+    path: "/about_you/on_on_hotel",
     rating: 4.3,
   },
 ];
