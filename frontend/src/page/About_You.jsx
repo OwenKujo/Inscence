@@ -1,8 +1,8 @@
-import React from 'react';
+
 import { FaArrowLeft } from 'react-icons/fa'; // Import the left arrow icon
 import { useNavigate } from 'react-router-dom';
-import bg from '../assets/Detail/AboutU_bg.png';
-import Box from '../assets/Detail/Laem_Ka_Beach.png';
+import bg from '../assets/Detail/detail_bg.jpg';
+import Box from '../assets/Detail/detail_bg.jpg';
 
 const About_You = () => {
   const navigate = useNavigate(); // Hook for navigation
