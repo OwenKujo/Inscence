@@ -8,7 +8,7 @@ const About_You = () => {
   const navigate = useNavigate(); // Hook for navigation
 
   const handleBackClick = () => {
-    navigate('/'); // Navigate to Home page
+    navigate('/about_you'); // Navigate to Home page
   };
   return (
     <div

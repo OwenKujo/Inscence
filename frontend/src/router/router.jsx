@@ -7,7 +7,6 @@ import Messages from "../page/Messages";
 import Profile from "../page/AccountProfile";
 import My_favorite from "../page/page_of_recommend/My_favorite";
 import About_You_test from "../page/page_of_recommend/About_You_test";
-import About_You from "../page/About_You";
 import Laem_Ka_Beach from "../page/page_of_recommend/page_of_about/Laem_Ka_Beach";
 import Thanon_Talang from "../page/page_of_recommend/page_of_about/Thanon_Talang";
 import Dibuk_Restaurant from "../page/page_of_recommend/page_of_about/Dibuk_Restaurant";
