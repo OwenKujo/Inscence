@@ -14,7 +14,8 @@ import Laem_Ka_Beach from "../page/page_of_recommend/page_of_about/Laem_Ka_Beach
 import Thanon_Talang from "../page/page_of_recommend/page_of_about/Thanon_Talang";
 import Dibuk_Restaurant from "../page/page_of_recommend/page_of_about/Dibuk_Restaurant";
 import On_On_Hotel from "../page/page_of_recommend/page_of_about/On_On_Hotel";
-import Login from "../page/Login";
+
+>>>>>>>>> Temporary merge branch 2
 const router = createBrowserRouter([
   {
     path: "/",
@@ -64,10 +65,6 @@ const router = createBrowserRouter([
         path: "/my_favorite",
         element: <My_favorite/>
       },
-      {
-        path: "/Login",
-        element: <Login/>
-      }
     ]
   }
 ]);
