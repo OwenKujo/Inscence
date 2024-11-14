@@ -5,7 +5,7 @@ import Navbar from './components/Navbar';
 
 function App() {
   return (
-    <div className='min-h-screen flex'>
+    <div className=' flex'>
       <Navbar />
       <main className='flex-1 mt-[60px] p-4'>
         <Outlet />
