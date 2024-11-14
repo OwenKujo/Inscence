@@ -16,6 +16,7 @@ import Dibuk_Restaurant from "../page/page_of_recommend/page_of_about/Dibuk_Rest
 import On_On_Hotel from "../page/page_of_recommend/page_of_about/On_On_Hotel";
 
 import Login from "../page/Login";
+import Signin from "../page/Signin";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -68,6 +69,10 @@ const router = createBrowserRouter([
       {
         path: "/Login",
         element: <Login/>
+      },
+      {
+        path: "/Signin",
+        element: <Signin/>
       }
     ]
   }
