@@ -8,7 +8,7 @@ import Profile from "../page/Profile";
 import App from "../App";
 import About_You from "../page/page_of_recommend/About_You";
 import My_favorite from "../page/page_of_recommend/My_favorite";
-
+import Login from "../page/Login";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -42,6 +42,10 @@ const router = createBrowserRouter([
         path: "/my_favorite",
         element: <My_favorite/>
       },
+      {
+        path: "/Login",
+        element: <Login/>
+      }
     ]
   }
 ]);
