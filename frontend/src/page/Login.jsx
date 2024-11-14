@@ -1,8 +1,18 @@
 import React, { useState } from 'react';
 import shoepic from '/src/assets/login/student.jpg';
+import { Link, useNavigate } from "react-router-dom";
+import { UserData } from "../context/UserContext";
+import { LoadingAnimation } from "../components/community/Loading";
+import { PinData } from "../context/PinContext";
+
 const Login = () => {
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+    const { loginUser, btnLoading } = UserData();
+    const navigate = useNavigate();
+
+    const { fetchPins } = PinData();
 
     const handleLogin = () => {
         alert(`Username: ${username}\nPassword: ${password}`);
