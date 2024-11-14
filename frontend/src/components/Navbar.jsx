@@ -17,6 +17,7 @@ const Navbar = () => {
         { name: "Search", path: "/search", icon: <LuSearch className="text-[22px]" /> },
         { name: "Messages", path: "/messages", icon: <AiOutlineMessage className="text-2xl" /> },
         { name: "Profile", path: "/profile", icon: <HiOutlineUser className="text-2xl" /> },
+        { name: "Login", path: "/Login", icon: <HiOutlineUser className="text-2xl" /> }
     ];
 
     const toggleMenu = () => {
