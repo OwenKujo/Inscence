@@ -38,7 +38,7 @@ const Login = () => {
                     </div>
                     <div className="form-group flex flex-col">
                         <div className="text-gray-500 text-sm underline items-right text-right block mb-5 invisible">Forgot password</div>
-                        <button className="p-3 bg-red-500 text-white rounded-md hover:bg-black items-center" onClick={handleLogin}>Enter</button>
+                        <button className="p-3 bg-blue-400 text-white rounded-md hover:bg-black items-center" onClick={handleLogin}>Enter</button>
                     </div>
                 </div>
             </div>
