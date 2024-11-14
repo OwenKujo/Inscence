@@ -5,7 +5,7 @@ import { LuSearch } from "react-icons/lu";
 import { AiOutlineMessage } from "react-icons/ai";
 import { HiOutlineUser } from "react-icons/hi2";
 import { FiMenu, FiX } from "react-icons/fi";
-
+import { GrAchievement } from "react-icons/gr";
 import Logo from '../assets/Logo/Logo1.svg';
 
 const Navbar = () => {
@@ -17,7 +17,8 @@ const Navbar = () => {
         { name: "Search", path: "/search", icon: <LuSearch className="text-[22px]" /> },
         { name: "Messages", path: "/messages", icon: <AiOutlineMessage className="text-2xl" /> },
         { name: "Profile", path: "/profile", icon: <HiOutlineUser className="text-2xl" /> },
-        { name: "Login", path: "/Login", icon: <HiOutlineUser className="text-2xl" /> }
+        { name: "Login", path: "/Login", icon: <HiOutlineUser className="text-2xl" /> },
+        { name: "Achievement", path: "/Achievement", icon: <GrAchievement className="text-2xl" /> }
     ];
 
     const toggleMenu = () => {

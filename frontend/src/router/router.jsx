@@ -14,7 +14,7 @@ import Laem_Ka_Beach from "../page/page_of_recommend/page_of_about/Laem_Ka_Beach
 import Thanon_Talang from "../page/page_of_recommend/page_of_about/Thanon_Talang";
 import Dibuk_Restaurant from "../page/page_of_recommend/page_of_about/Dibuk_Restaurant";
 import On_On_Hotel from "../page/page_of_recommend/page_of_about/On_On_Hotel";
-
+import Achievementscreen from "../page/Achievement";
 import Login from "../page/Login";
 import Signin from "../page/Signin";
 const router = createBrowserRouter([
@@ -73,6 +73,10 @@ const router = createBrowserRouter([
       {
         path: "/Signin",
         element: <Signin/>
+      },
+      {
+        path: "/Achievement",
+        element: <Achievementscreen/>
       }
     ]
   }
