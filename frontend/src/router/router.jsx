@@ -8,17 +8,13 @@ import Profile from "../page/Profile";
 import App from "../App";
 
 import My_favorite from "../page/page_of_recommend/My_favorite";
-<<<<<<< HEAD
 import About_You_test from "../page/page_of_recommend/About_You_test";
 import About_You from "../page/About_You";
 import Laem_Ka_Beach from "../page/page_of_recommend/page_of_about/Laem_Ka_Beach";
 import Thanon_Talang from "../page/page_of_recommend/page_of_about/Thanon_Talang";
 import Dibuk_Restaurant from "../page/page_of_recommend/page_of_about/Dibuk_Restaurant";
 import On_On_Hotel from "../page/page_of_recommend/page_of_about/On_On_Hotel";
-
-=======
 import Login from "../page/Login";
->>>>>>> Jin
 const router = createBrowserRouter([
   {
     path: "/",
@@ -46,7 +42,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/about_you",
-        element: <About_You_test/>
+        element: <About_You/>
       },
       {
         path: "/about_you/laem_ka_beach",
