@@ -1,8 +1,8 @@
-
+// import React from 'react';
 import { FaArrowLeft } from 'react-icons/fa'; // Import the left arrow icon
 import { useNavigate } from 'react-router-dom';
 import bg from '../assets/Detail/detail_bg.jpg';
-import Box from '../assets/Detail/detail_bg.jpg';
+import Box from '../assets/Detail/detail_button.png';
 
 const About_You = () => {
   const navigate = useNavigate(); // Hook for navigation
@@ -31,7 +31,7 @@ const About_You = () => {
         <img
           src={Box}
           alt="Box below text"
-          className="w-10/12 h-auto object-cover"
+          className="w-1/4 h-auto object-cover"
         />
       </div>
     </div>
