@@ -31,7 +31,7 @@ const About_You = () => {
         <img
           src={Box}
           alt="Box below text"
-          className="w-1/4 h-auto object-cover"
+          className="w-auto h-auto object-cover"
         />
       </div>
     </div>
