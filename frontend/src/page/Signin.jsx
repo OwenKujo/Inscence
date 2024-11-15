@@ -1,12 +1,23 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { LoadingAnimation } from "../components/community/Loading";
+import { Link, useNavigate } from 'react-router-dom';
 import shoepic from '/src/assets/login/student.jpg';
-const Login = () => {
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
-    const [email, setmail] = useState('');
-    const handleLogin = () => {
-        alert(`Username: ${username}\nPassword: ${password}`);
+import { UserData } from "../context/UserContext";
+import { PinData } from "../context/PinContext";
+
+const SignIn = () => {
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [name, setName] = useState("");
+  
+    const { registerUser, btnLoading } = UserData();
+    const navigate = useNavigate();
+  
+    const { fetchPins } = PinData();
+  
+    const submitHandler = (e) => {
+      e.preventDefault();
+      registerUser(name, email, password, navigate, fetchPins);
     };
 
     return (
@@ -16,40 +27,64 @@ const Login = () => {
                 }}>
                 <h2 className="text-5xl font-bold mb-8 text-center invisible">ffd</h2>
                 <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 p-5 mx-auto my-32">
-                    <h2 className="text-5xl font-bold mb-8 text-center">Sign In</h2>
-                    <div className="form-group">
-                        <input 
-                            className="rounded-md p-2 w-full border border-gray-300 block mb-10"
-                            type="text" 
-                            id="username" 
-                            placeholder="Enter username"
-                            value={username}
-                            onChange={(e) => setUsername(e.target.value)}
-                        />
-                    </div>
-                    <div className="form-group">
-                        <input 
-                            className="rounded-md p-2 w-full border border-gray-300 mb-10"
-                            type="password" 
-                            id="password" 
-                            placeholder="Enter password"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                        />
-                    </div>
-                    <div className="form-group">
-                        <input 
-                            className="rounded-md  p-2 w-full border border-gray-300"
-                            type="Email" 
-                            id="Email" 
-                            placeholder="Enter Email"
-                            value={email}
-                            onChange={(e) => setmail(e.target.value)}
-                        />
-                    </div>
+                    <h2 className="text-4xl font-bold mb-8 text-center">Sign In</h2>
+                    <form onSubmit={submitHandler}>
+                        <div className="form-group">
+                        <label
+                            htmlFor="name"
+                            className="block text-sm font-medium text-gray-700 mb-1"
+                            >
+                            Username
+                            </label>
+                            <input 
+                                className="rounded-md p-2 w-full border border-gray-300 block mb-5"
+                                type="text" 
+                                id="name" 
+                                placeholder="Enter username"
+                                value={name}
+                                onChange={(e) => setName(e.target.value)}
+                                required
+                            />
+                        </div>
+                        <div className="form-group">
+                            <label
+                            htmlFor="passwor"
+                            className="block text-sm font-medium text-gray-700 mb-1"
+                            >
+                            Password
+                            </label>
+                            <input 
+                                className="rounded-md p-2 w-full border border-gray-300 mb-5"
+                                type="password" 
+                                id="password" 
+                                placeholder="Enter password"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                                required
+                            />
+                        </div>
+                        <div className="form-group">
+                            <label
+                            htmlFor="Email"
+                            className="block text-sm font-medium text-gray-700 mb-1"
+                            >
+                            Email
+                            </label>
+                            <input 
+                                className="rounded-md  p-2 w-full border border-gray-300 mb-2"
+                                type="Email" 
+                                id="Email" 
+                                placeholder="Enter Email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                required
+                            />
+                        </div>
+                        <button type="submit" className="common-btn" disabled={btnLoading}>
+                            {btnLoading ? <LoadingAnimation /> : "Enter"}
+                        </button>
+                    </form>
                     <div className="form-group flex flex-col">
-                       
-                        <button className="p-2 bg-blue-400 text-white rounded-md hover:bg-black items-center mt-5" >Enter</button> 
                         <Link to="/Login" className="text-red-500 text-sm underline text-center block mt-5">Log in?</Link>
                        
                     </div>
@@ -59,4 +94,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default SignIn;

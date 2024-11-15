@@ -1,0 +1,55 @@
+.common-input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+  }
+  
+  .common-btn {
+    background-color: #3490dc;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+  
+  .common-btn:hover {
+    background-color: #2779bd;
+  }
+
+  .my-masonry-grid {
+    display: flex;
+    margin-left: -30px; /* Adjust margin to match spacing */
+    width: auto;
+  }
+  
+  .my-masonry-grid_column {
+    padding-left: 30px; /* Adjust padding to match spacing */
+    background-clip: padding-box;
+  }
+  
+  /* Style for individual pin cards inside the Masonry grid */
+  .my-masonry-grid_column > div {
+    margin-bottom: 30px;
+  }
+  /* PinCard styling - already in place */
+  
+  /* Optional: Hover effects for cards */
+  /* PinCard styling */
+  .PinCard {
+    background-color: white; /* Card background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    padding: 1rem; /* Padding inside the card */
+    transition: transform 0.2s; /* Smooth hover effect */
+    min-height: 300px; /* Minimum height for each card */
+  }
+  
+  /* Optional: Hover effects for cards */
+  .PinCard:hover {
+    transform: scale(1.05); /* Slight scaling on hover */
+  }
+  
