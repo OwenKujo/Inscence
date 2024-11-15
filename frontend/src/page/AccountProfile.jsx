@@ -60,7 +60,7 @@ const Account = () => {
             {userPins && userPins.length > 0 ? (
               userPins.map((e) => <PinCard key={e._id} pin={e} />)
             ) : (
-              <p>No Pins Yet</p>
+              <p>No Post Yet</p>
             )}
           </div>
         </div>

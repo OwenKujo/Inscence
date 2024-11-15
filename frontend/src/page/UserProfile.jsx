@@ -106,7 +106,7 @@ const UserProfile = ({ user: loggedInUser }) => {
                     </div>
                   ))
                 ) : (
-                  <p>No Pins Yet</p>
+                  <p>No post Yet</p>
                 )}
               </Masonry>
             </div>
