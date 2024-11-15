@@ -22,7 +22,7 @@ const Navbar = () => {
     { name: "Messages", path: "/messages", icon: <AiOutlineMessage className="text-2xl" /> },
     { name: "Achievement", path: "/Achievement", icon: <GrAchievement className="text-2xl" /> },
     isAuth
-      ? { name: `Profile (${user?.name || "User"})`, path: "/profile", icon: <HiOutlineUser className="text-2xl" /> }
+      ? { name: `Profile (${user?.name || "User"})`, path: "/accountprofile", icon: <HiOutlineUser className="text-2xl" /> }
       : { name: "Login", path: "/login", icon: <HiOutlineUser className="text-2xl" /> },
   ];
 

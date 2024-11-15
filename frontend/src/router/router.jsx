@@ -4,7 +4,7 @@ import Home from "../page/Home";
 import Community from "../page/Community";
 import Search from "../page/Search";
 import Messages from "../page/Messages";
-import Profile from "../page/Profile";
+import Profile from "../page/AccountProfile";
 import My_favorite from "../page/page_of_recommend/My_favorite";
 import About_You_test from "../page/page_of_recommend/About_You_test";
 import About_You from "../page/About_You";
@@ -18,6 +18,9 @@ import AchievementScreen from "../page/Achievement";
 import Create from "../page/community/CreatePost";
 import ProtectedRoute from "../components/ProtectedRoute"; // Import ProtectedRoute
 import { PinProvider } from "../context/PinContext"; // Import PinProvider
+import PinPage from "../page/community/PinPage";
+import { UserProvider } from "../context/UserContext"; // Import UserProvider
+import Account from "../page/AccountProfile";
 
 const router = createBrowserRouter([
   {
@@ -34,14 +37,16 @@ const router = createBrowserRouter([
         element: <SignIn />,
       },
 
-      // Protected Routes
+      // Protected Routes with UserProvider and PinProvider
       {
         path: "/",
         element: (
           <ProtectedRoute>
-            <PinProvider>
-              <Home />
-            </PinProvider>
+            <UserProvider>
+              <PinProvider>
+                <Home />
+              </PinProvider>
+            </UserProvider>
           </ProtectedRoute>
         ),
       },
@@ -49,9 +54,11 @@ const router = createBrowserRouter([
         path: "/community",
         element: (
           <ProtectedRoute>
-            <PinProvider>
-              <Community />
-            </PinProvider>
+            <UserProvider>
+              <PinProvider>
+                <Community />
+              </PinProvider>
+            </UserProvider>
           </ProtectedRoute>
         ),
       },
@@ -59,9 +66,11 @@ const router = createBrowserRouter([
         path: "/search",
         element: (
           <ProtectedRoute>
-            <PinProvider>
-              <Search />
-            </PinProvider>
+            <UserProvider>
+              <PinProvider>
+                <Search />
+              </PinProvider>
+            </UserProvider>
           </ProtectedRoute>
         ),
       },
@@ -69,19 +78,23 @@ const router = createBrowserRouter([
         path: "/messages",
         element: (
           <ProtectedRoute>
-            <PinProvider>
-              <Messages />
-            </PinProvider>
+            <UserProvider>
+              <PinProvider>
+                <Messages />
+              </PinProvider>
+            </UserProvider>
           </ProtectedRoute>
         ),
       },
       {
-        path: "/profile",
+        path: "/accountprofile",
         element: (
           <ProtectedRoute>
-            <PinProvider>
-              <Profile />
-            </PinProvider>
+            <UserProvider>
+              <PinProvider>
+                <Account/>
+              </PinProvider>
+            </UserProvider>
           </ProtectedRoute>
         ),
       },
@@ -89,9 +102,11 @@ const router = createBrowserRouter([
         path: "/about_you",
         element: (
           <ProtectedRoute>
-            <PinProvider>
-              <About_You_test />
-            </PinProvider>
+            <UserProvider>
+              <PinProvider>
+                <About_You_test />
+              </PinProvider>
+            </UserProvider>
           </ProtectedRoute>
         ),
       },
@@ -99,9 +114,11 @@ const router = createBrowserRouter([
         path: "/about_you/laem_ka_beach",
         element: (
           <ProtectedRoute>
-            <PinProvider>
-              <Laem_Ka_Beach />
-            </PinProvider>
+            <UserProvider>
+              <PinProvider>
+                <Laem_Ka_Beach />
+              </PinProvider>
+            </UserProvider>
           </ProtectedRoute>
         ),
       },
@@ -109,9 +126,11 @@ const router = createBrowserRouter([
         path: "/about_you/thanon_talang",
         element: (
           <ProtectedRoute>
-            <PinProvider>
-              <Thanon_Talang />
-            </PinProvider>
+            <UserProvider>
+              <PinProvider>
+                <Thanon_Talang />
+              </PinProvider>
+            </UserProvider>
           </ProtectedRoute>
         ),
       },
@@ -119,9 +138,11 @@ const router = createBrowserRouter([
         path: "/about_you/dibuk_restaurant",
         element: (
           <ProtectedRoute>
-            <PinProvider>
-              <Dibuk_Restaurant />
-            </PinProvider>
+            <UserProvider>
+              <PinProvider>
+                <Dibuk_Restaurant />
+              </PinProvider>
+            </UserProvider>
           </ProtectedRoute>
         ),
       },
@@ -129,9 +150,11 @@ const router = createBrowserRouter([
         path: "/about_you/on_on_hotel",
         element: (
           <ProtectedRoute>
-            <PinProvider>
-              <On_On_Hotel />
-            </PinProvider>
+            <UserProvider>
+              <PinProvider>
+                <On_On_Hotel />
+              </PinProvider>
+            </UserProvider>
           </ProtectedRoute>
         ),
       },
@@ -139,9 +162,11 @@ const router = createBrowserRouter([
         path: "/my_favorite",
         element: (
           <ProtectedRoute>
-            <PinProvider>
-              <My_favorite />
-            </PinProvider>
+            <UserProvider>
+              <PinProvider>
+                <My_favorite />
+              </PinProvider>
+            </UserProvider>
           </ProtectedRoute>
         ),
       },
@@ -149,9 +174,11 @@ const router = createBrowserRouter([
         path: "/achievement",
         element: (
           <ProtectedRoute>
-            <PinProvider>
-              <AchievementScreen />
-            </PinProvider>
+            <UserProvider>
+              <PinProvider>
+                <AchievementScreen />
+              </PinProvider>
+            </UserProvider>
           </ProtectedRoute>
         ),
       },
@@ -159,9 +186,23 @@ const router = createBrowserRouter([
         path: "/create",
         element: (
           <ProtectedRoute>
-            <PinProvider>
-              <Create />
-            </PinProvider>
+            <UserProvider>
+              <PinProvider>
+                <Create />
+              </PinProvider>
+            </UserProvider>
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: "/pin/:id",
+        element: (
+          <ProtectedRoute>
+            <UserProvider>
+              <PinProvider>
+                <PinPage />
+              </PinProvider>
+            </UserProvider>
           </ProtectedRoute>
         ),
       },
