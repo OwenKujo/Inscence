@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import shoepic from '/src/assets/login/student.jpg';
-const Login = () => {
+const Signin = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [email, setmail] = useState('');
@@ -59,4 +59,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Signin;
