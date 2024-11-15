@@ -21,6 +21,7 @@ import { PinProvider } from "../context/PinContext"; // Import PinProvider
 import PinPage from "../page/community/PinPage";
 import { UserProvider } from "../context/UserContext"; // Import UserProvider
 import Account from "../page/AccountProfile";
+import UserProfile from "../page/UserProfile";
 
 const router = createBrowserRouter([
   {
@@ -93,6 +94,18 @@ const router = createBrowserRouter([
             <UserProvider>
               <PinProvider>
                 <Account/>
+              </PinProvider>
+            </UserProvider>
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: "/user/:id",
+        element: (
+          <ProtectedRoute>
+            <UserProvider>
+              <PinProvider>
+                <UserProfile/>
               </PinProvider>
             </UserProvider>
           </ProtectedRoute>
