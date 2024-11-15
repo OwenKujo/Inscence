@@ -1,17 +1,18 @@
-// App.jsx
-import { Outlet } from 'react-router-dom';
-import './App.css';
-import Navbar from './components/Navbar';
+import { Outlet } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import { UserData } from "./context/UserContext";
 
-function App() {
+const App = () => {
+  const { isAuth, user } = UserData();
+
   return (
-    <div className='min-h-screen flex'>
-      <Navbar />
-      <main className='flex-1 mt-[60px] p-4'>
+    <div className="min-h-screen flex">
+      {isAuth && <Navbar user={user} />}
+      <main className="flex-1 mt-[60px] p-4">
         <Outlet />
       </main>
     </div>
   );
-}
+};
 
 export default App;
