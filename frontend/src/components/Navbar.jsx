@@ -15,6 +15,12 @@ const Navbar = () => {
   const { isAuth, user } = UserData(); // Access authentication status and user data
   const location = useLocation(); // Access current location
 
+  // Define paths where the navbar should be hidden
+  const hideNavbarPaths = ["/login", "/signin"];
+  if (hideNavbarPaths.includes(location.pathname)) {
+    return null; // Don't render the Navbar on login or signin pages
+  }
+
   const navLists = [
     { name: "Home", path: "/", icon: <HiOutlineHome className="text-2xl" /> },
     { name: "Community", path: "/community", icon: <IoCalendarOutline className="text-2xl" /> },
