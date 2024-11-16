@@ -1,5 +1,5 @@
 import React from 'react'
-import About_You from '../../About_You'
+import About_You from '../../About_moreDetail'
 
 const Laem_Ka_Beach = () => {
   return (
