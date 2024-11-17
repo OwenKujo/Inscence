@@ -8,7 +8,7 @@ const App = () => {
   return (
     <div className="min-h-screen flex">
       {isAuth && <Navbar user={user} />}
-      <main className="flex-1 mt-[60px] p-4">
+      <main className="flex-1 ">
         <Outlet />
       </main>
     </div>

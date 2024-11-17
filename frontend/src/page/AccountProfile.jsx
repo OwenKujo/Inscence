@@ -36,9 +36,9 @@ const Account = () => {
   }
 
   return (
-    <div>
+    <div className="mt-[60px]">
       <div className="flex flex-col items-center justify-center">
-        <div className="p-6 w-full max-w-6xl">
+        <div className="p-4 w-full max-w-6xl">
           <div className="flex items-center justify-center">
             <div className="w-24 h-24 rounded-full bg-gray-300 flex items-center justify-center">
               {/* Display the first letter of the user's name */}

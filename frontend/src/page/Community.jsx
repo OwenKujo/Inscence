@@ -13,17 +13,17 @@ const Home = () => {
     default: 4,  // 4 columns by default
     1100: 3,     // 3 columns at 1100px
     700: 2,      // 2 columns at 700px
-    500: 1,      // 1 column at 500px
+    500: 2,      // 2 column at 500px
   };
 
   return (
-    <div className="p-4">
+    <div className="">
       {loading ? (
         <Loading />
       ) : (
         <Masonry
           breakpointCols={breakpointColumnsObj}
-          className="my-masonry-grid" // default Masonry CSS
+          className="my-masonry-grid p-4" // default Masonry CSS
           columnClassName="my-masonry-grid_column"
         >
           {pins.map((pin) => (

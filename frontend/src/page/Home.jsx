@@ -9,7 +9,7 @@ const Home = () => {
       {/* user */}
       {/* <Profile_user /> */}
       {/* Recommend */}
-      <div className='mt-[20px]'>
+      <div className='mt-[60px] p-4'>
           <h1 className='text-[20px] font-body font-bold text-[#000000] mb-4'>
             Recommend Movies categories
           </h1>
@@ -18,7 +18,7 @@ const Home = () => {
           </div>
       </div>
       {/* All Show */}
-      <div className='mt-[15px]'>
+      <div className='mt-[10px] p-4'>
           <h1 className='text-[20px] font-body font-bold text-[#000000] mb-4'>
             All Show
           </h1>

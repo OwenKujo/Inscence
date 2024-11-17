@@ -68,9 +68,9 @@ const PinPage = () => {
   }
 
   return (
-    <div>
+    <div className="mt-[60px]">
       {pin && (
-        <div className="flex flex-col items-center bg-gray-100 p-4 min-h-screen">
+        <div className="flex flex-col items-center bg-gray-100 min-h-screen">
           <div className="bg-white rounded-lg shadow-lg flex flex-col md:flex-row w-full max-w-4xl">
             <div className="w-full md:w-1/2 bg-gray-200 rounded-t-lg md:rounded-l-lg md:rounded-t-none flex items-center justify-center">
               {pin.image && (
@@ -195,7 +195,7 @@ const PinPage = () => {
 
                   <button
                     type="submit"
-                    className="ml-2 bg-orange-500 px-4 py-2 rounded-md text-white"
+                    className="ml-2 bg-[#23b1e1] px-4 py-2 rounded-md text-white"
                   >
                     Add+
                   </button>

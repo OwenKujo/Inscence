@@ -22,21 +22,21 @@ const AchievementScreen = () => {
     ];
 
     return (
-        <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
+        <div className="min-h-screen font-body bg-gray-100 flex items-center justify-center p-4">
             <div className="max-w-md w-full">
-                <h2 className="text-center text-2xl font-bold mb-4">Achievement 1</h2>
-                <p className="text-center text-gray-500 mb-8">Super Community Fan</p>
+                <h2 className="text-center text-2xl font-semibold mb-4">Achievement 1</h2>
+                <p className="text-center font-medium text-gray-500 mb-8">Super Community Fan</p>
                 
                 <div className="space-y-4">
                     {achievements.map((achievement, index) => (
                         <div 
                             key={index} 
                             onClick={() => achievement.completed && setIsModalOpen(true)}
-                            className={`p-4 rounded-lg shadow cursor-pointer ${achievement.completed ? 'bg-blue-200' : 'bg-gray-200'}`}
+                            className={`p-4 rounded-lg shadow-md cursor-pointer ${achievement.completed ? 'bg-blue-400' : 'bg-white'}`}
                         >
                             <div className="flex items-center">
                                 <span 
-                                    className={`inline-block w-8 h-8 rounded-full mr-4 ${achievement.completed ? 'bg-yellow-400' : 'bg-gray-400'}`}
+                                    className={`inline-block w-8 h-8 rounded-full p-4 mr-4 ${achievement.completed ? 'bg-yellow-400' : 'bg-gray-400'}`}
                                 ></span>
                                 <div>
                                     <p className="font-bold">{achievement.title}</p>

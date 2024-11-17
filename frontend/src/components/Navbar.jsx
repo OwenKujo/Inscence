@@ -48,12 +48,14 @@ const Navbar = () => {
 
           {/* Render "Create" only on Community Page */}
           {location.pathname === "/community" && (
-            <a
-              href="/create"
-              className="text-sm font-medium text-white bg-[#23b1e1] px-4 py-2 rounded-md hover:bg-[#2e8cae] transition"
-            >
-              Create Post
-            </a>
+            <div className="pl-10">
+              <a
+                href="/create"
+                className="text-sm font-medium text-white bg-[#23b1e1] px-4 py-2 rounded-md hover:bg-[#2e8cae] transition"
+              >
+                Create Post
+              </a>
+            </div>
           )}
         </div>
 
