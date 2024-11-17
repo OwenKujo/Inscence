@@ -20,7 +20,7 @@ const PinCard = ({ pin }) => {
             <Link
               to={`/pin/${pin._id}`}
               aria-label={`View post: ${pin.title}`}
-              className="bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              className="bg-[#23b1e1] hover:bg-[#2e8cae] text-white px-4 py-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
             >
               View Post
             </Link>

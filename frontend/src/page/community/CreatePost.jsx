@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { FaPlus } from "react-icons/fa";
-import { PinData } from "../context/PinContext";
+import { PinData } from "../../context/PinContext";
 import { useNavigate } from "react-router-dom";
 
 const Create = () => {
@@ -46,11 +46,11 @@ const Create = () => {
       if (response && response._id) {
         navigate(`/pin/${response._id}`);
       } else {
-        navigate("/");
+        navigate("/community");
       }
     } catch (error) {
       console.error("Error adding pin:", error);
-      navigate("/");
+      navigate("/community");
     }
   };
 
@@ -72,7 +72,7 @@ const Create = () => {
     <div>
       <div className="flex flex-wrap justify-center items-center gap-2 mt-10">
         <div className="flex items-center justify-center">
-          <div className="flex flex-col items-center justify-center w-80 h-auto p-6 bg-white rounded-lg shadow-lg">
+          <div className="flex flex-col items-center justify-center w-80 h-auto p-6 bg-gray-100 rounded-lg shadow-lg">
             {filePrev && <img src={filePrev} alt="Preview" />}
             <div
               className="flex flex-col items-center justify-center h-full cursor-pointer"
@@ -97,9 +97,9 @@ const Create = () => {
         </div>
 
         <div>
-          <div className="flex items-center justify-center bg-gray-100">
+          <div className="flex items-center justify-center bg-gray-100 rounded-lg">
             <form
-              className="w-full max-w-lg p-6 bg-white rounded-lg shadow-lg"
+              className="w-full max-w-lg p-6 bg-gray-100 rounded-lg shadow-lg"
               onSubmit={addPinHandler}
             >
               <div className="mb-4">
