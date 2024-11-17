@@ -1,5 +1,5 @@
 import { User } from "../models/userModel.js";
-const bcrypt = require('bcryptjs');
+import bcrypt from "bcrypt";
 import TryCatch from "../utils/TryCatch.js";
 import generateToken from "../utils/generateToken.js";
 
