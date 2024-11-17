@@ -21,7 +21,7 @@ const Login = () => {
     return (
         <div>
             <div className="bg-cover bg-center min-h-screen font-roboto" style={{ 
-                backgroundImage: `linear-gradient(rgba (0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${shoepic})`
+                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${shoepic})`
             }}>
                 <h2 className="text-5xl font-bold mb-8 text-center invisible">ffd</h2>
                 <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md p-5 mx-auto my-32">
