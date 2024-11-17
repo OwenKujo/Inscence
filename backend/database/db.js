@@ -1,12 +1,22 @@
 import mongoose from "mongoose";
+import dotenv from "dotenv";
+
+// Load environment variables
+dotenv.config();
 
 const connectDb = async () => {
   try {
-    await mongoose.connect(process.env.MONGO_URL, {
+    const uri = process.env.MONGO_URL;
+    if (!uri) {
+      throw new Error("MONGO_URL is not defined in environment variables.");
+    }
+
+    await mongoose.connect(uri, {
       dbName: "Inscence",
-      useNewUrlParser: true, // Enables the new URL parser
-      useUnifiedTopology: true, // Uses the new Server Discover and Monitoring engine
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
     });
+
     console.log("MongoDB connected");
   } catch (error) {
     console.error("Error connecting to MongoDB:", error);
