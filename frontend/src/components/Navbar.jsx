@@ -44,7 +44,7 @@ const Navbar = () => {
         {/* Left Section */}
         <div className="container mx-auto flex justify-between items-center h-16">
           <div className="flex items-center">
-            <img src={Logo} alt="Logo" className="w-[150px] h-[45px]" />
+            <img src={Logo} alt="Logo" className="w-[150px] h-[45px] object-cover" />
           </div>
 
           {/* Render "Create" only on Community Page */}
