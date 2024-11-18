@@ -8,7 +8,8 @@ import { HiOutlineUser } from "react-icons/hi2";
 import { FiMenu, FiX } from "react-icons/fi";
 import { GrAchievement } from "react-icons/gr";
 import { UserData } from "../context/UserContext"; // Import UserContext
-import Logo from "../assets/Logo/Logo1.svg";
+import Logo from "../assets/Logo/Logo2.svg";
+
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,11 +40,11 @@ const Navbar = () => {
   return (
     <div>
       {/* Top Navbar */}
-      <nav className="text-[#4c4e4f] font-body bg-white shadow-gray-400 fixed w-full p-4 z-40 flex justify-between items-center h-16 border">
+      <nav className="text-[#4c4e4f] font-body bg-white p-4 shadow-gray-400 fixed w-full z-40 flex justify-between items-center h-16 border">
         {/* Left Section */}
         <div className="container mx-auto flex justify-between items-center h-16">
-          <div className="text-xl object-cover items-center">
-            <img src={Logo} alt="Logo" className="w-full h-[45px]" />
+          <div className="flex items-center">
+            <img src={Logo} alt="Logo" className="w-[150px] h-[45px]" />
           </div>
 
           {/* Render "Create" only on Community Page */}
