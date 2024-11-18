@@ -20,7 +20,7 @@ const Login = () => {
 
     return (
         <div>
-            <div className="bg-cover bg-center min-h-screen font-roboto" style={{ 
+            <div className="bg-cover bg-center min-h-screen font-body" style={{ 
                 backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${shoepic})`
             }}>
                 <h2 className="text-5xl font-bold mb-8 text-center invisible">ffd</h2>
@@ -72,7 +72,7 @@ const Login = () => {
                         <div className='t-4 text-center text-sm mt-5'>
                             <span>
                                 Not a member?
-                                <Link to="/signin" className="text-red-500 font-medium text-pinterest hover:underline">Signin</Link>
+                                <Link to="/signin" className="text-[#24BAEC] font-medium text-pinterest hover:underline"> Signin</Link>
                             </span>
                         </div>
                     </div>

@@ -21,12 +21,12 @@ const SignIn = () => {
     };
 
     return (
-        <div>
+        <div className='font-body'>
             <div className="bg-cover bg-center min-h-screen font-roboto" style={{ 
                     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${shoepic})`
                 }}>
                 <h2 className="text-5xl font-bold mb-8 text-center invisible">ffd</h2>
-                <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 p-5 mx-auto my-32">
+                <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md p-5 mx-auto my-32">
                     <h2 className="text-4xl font-bold mb-8 text-center">Sign In</h2>
                     <form onSubmit={submitHandler}>
                         <div className="form-group">
@@ -85,8 +85,7 @@ const SignIn = () => {
                         </button>
                     </form>
                     <div className="form-group flex flex-col">
-                        <Link to="/Login" className="text-red-500 text-sm underline text-center block mt-5">Log in?</Link>
-                       
+                        <Link to="/Login" className="text-[#24BAEC] text-sm hover:underline font-medium text-center block mt-5">Log in ?</Link>
                     </div>
                 </div>
             </div>
