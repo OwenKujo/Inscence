@@ -39,16 +39,17 @@ const Navbar = () => {
   return (
     <div>
       {/* Top Navbar */}
-      <nav className="text-[#4c4e4f] font-body bg-white shadow-gray-400 fixed w-full z-40 flex justify-between items-center px-4 h-16 border">
+      <nav className="text-[#4c4e4f] font-body bg-white shadow-gray-400 fixed w-full p-4 z-40 flex justify-between items-center h-16 border">
         {/* Left Section */}
-        <div className="flex items-center space-x-4">
-          <div className="text-xl font-semibold object-cover items-center">
+        <div className="container mx-auto flex justify-between items-center h-16">
+          <div className="text-xl object-cover items-center">
             <img src={Logo} alt="Logo" className="w-full h-[45px]" />
           </div>
 
           {/* Render "Create" only on Community Page */}
+          <div className="mx-auto ml-10">
           {location.pathname === "/community" && (
-            <div className="pl-10">
+            <div>
               <a
                 href="/create"
                 className="text-sm font-medium text-white bg-[#23b1e1] px-4 py-2 rounded-md hover:bg-[#2e8cae] transition"
@@ -57,15 +58,16 @@ const Navbar = () => {
               </a>
             </div>
           )}
+          </div>
         </div>
 
         {/* Hamburger Menu Button for small screens */}
-        <button onClick={toggleMenu} className="md:hidden text-white text-2xl focus:outline-none">
+        <button onClick={toggleMenu} className="lg:hidden text-white text-2xl focus:outline-none">
           {isMenuOpen ? <FiX className="text-[#4c4e4f]" /> : <FiMenu className="text-[#4c4e4f]" />}
         </button>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex space-x-4">
+        <div className="hidden md:hidden lg:flex ">
           {navLists.map((list, index) => (
             <a
               href={list.path}
