@@ -1,8 +1,8 @@
-import React from 'react';
+// import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import img1 from '../assets/recommend/img1.svg';
-import img2 from '../assets/recommend/img2.svg';
+import img1 from '../assets/recommend/img6.jpg';
+import img2 from '../assets/recommend/img2.jpg';
 
 const dramaData = [
   {
@@ -14,10 +14,10 @@ const dramaData = [
   },
   {
     id: 2,
-    title: "Be My Favorite",
+    title: "My Cherie Amour",
     location: "Bangkok, Thailand",
     image: img2,
-    path: "/my_favorite"
+    path: "/My_Cherie_Amour"
   }
 ];
 
