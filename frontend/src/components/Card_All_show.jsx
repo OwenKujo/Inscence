@@ -1,54 +1,47 @@
-import React from 'react';
+// import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import img1 from '../assets/recommend/img1.svg';
-import img2 from '../assets/recommend/img2.svg';
-import img3 from '../assets/recommend/img3.svg';
-import img4 from '../assets/recommend/img4.svg';
-
+import img1 from '../assets/recommend/img1.jpg';
+import img2 from '../assets/recommend/img2.jpg';
+import img3 from '../assets/recommend/img3.jpg';
+import img4 from '../assets/recommend/img4.jpg';
+import img6 from '../assets/recommend/img6.jpg';
 const dramaData = [
   {
     id: 1,
-    title: "Step by Step",
-    location: "Chon Buri, Thailand",
+    title: "How to Make Millions Before Grandma Dies",
+    location: "Talat Phlu, Thailand",
     image: img3,
-    path: "/step_by_step"
+    path: "/lhanma"
   },
   {
     id: 2,
-    title: "Cutie Pie",
-    location: "Bangkok, Thailand",
+    title: "Love Destiny",
+    location: "Ayutthaya, Samut-Prakan, Lopburi, Saraburi, Thailand",
     image: img4,
-    path: "/cutie_pie"
+    path: "/lovedestiny"
   },
   {
     id: 3,
-    title: "Journey to the South",
-    location: "Phuket, Thailand",
-    image: img1,
-    path: "/journey_south"
+    title: "My Cherie Amour",
+    location: "Bangkok, Thailand",
+    image: img2,
+    path: "/My_Cherie_Amour"
   },
   {
     id: 4,
-    title: "Love in Bangkok",
-    location: "Bangkok, Thailand",
-    image: img2,
-    path: "/love"
+    title: "One for the Road",
+    location: "Chonburi, Nakhon Ratchasima, Thailand",
+    image: img1,
+    path: "/OneRoad"
   },
   {
     id: 5,
     title: "I Tell Sunset About You",
-    location: "Krabi, Thailand",
-    image: img2,
-    path: "/sunset"
+    location: "Phuket, Thailand",
+    image: img6,
+    path: "/about_you"
   },
-  {
-    id: 6,
-    title: "Be My Favorite",
-    location: "Chiang Mai, Thailand",
-    image: img2,
-    path: "/favorite"
-  }
 ];
 
 const Card_All_show = () => {
