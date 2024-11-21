@@ -3,44 +3,44 @@ import img2 from '../../../assets/sunset_about_you/Laem_Ka_Beach/img2.jpg';
 import img3 from '../../../assets/sunset_about_you/Laem_Ka_Beach/img3.jpg';
 import img4 from '../../../assets/sunset_about_you/Laem_Ka_Beach/img4.jpg';
 
-const reviews = [
-  {
-    id: 1,
-    user: "Jane Doe",
-    avatar: "https://via.placeholder.com/50?text=JD",
-    review:
-      "A beautiful and serene beach! The water is crystal clear, and the atmosphere is so peaceful. Highly recommend for a relaxing day.",
-    rating: 5,
-  },
-  {
-    id: 2,
-    user: "John Smith",
-    avatar: "https://via.placeholder.com/50?text=JS",
-    review:
-      "Great spot for swimming and relaxing. The beach is clean, and there are plenty of shady spots under the trees.",
-    rating: 4,
-  },
-  {
-    id: 3,
-    user: "Emily White",
-    avatar: "https://via.placeholder.com/50?text=EW",
-    review:
-      "The beach is gorgeous, but it gets a bit crowded during the weekends. Go early to grab a good spot.",
-    rating: 4,
-  },
-  {
-    id: 4,
-    user: "Michael Brown",
-    avatar: "https://via.placeholder.com/50?text=MB",
-    review:
-      "Perfect for families! My kids loved playing in the calm water, and we had a great picnic by the shore.",
-    rating: 5,
-  },
-];
+
 
 const Laem_Ka_Beach = () => {
   const images = [img1, img2, img3, img4];
-
+  const reviews = [
+    {
+      id: 1,
+      user: "Jane Doe",
+      avatar: "https://via.placeholder.com/50?text=JD",
+      review:
+        "A beautiful and serene beach! The water is crystal clear, and the atmosphere is so peaceful. Highly recommend for a relaxing day.",
+      rating: 5,
+    },
+    {
+      id: 2,
+      user: "John Smith",
+      avatar: "https://via.placeholder.com/50?text=JS",
+      review:
+        "Great spot for swimming and relaxing. The beach is clean, and there are plenty of shady spots under the trees.",
+      rating: 4,
+    },
+    {
+      id: 3,
+      user: "Emily White",
+      avatar: "https://via.placeholder.com/50?text=EW",
+      review:
+        "The beach is gorgeous, but it gets a bit crowded during the weekends. Go early to grab a good spot.",
+      rating: 4,
+    },
+    {
+      id: 4,
+      user: "Michael Brown",
+      avatar: "https://via.placeholder.com/50?text=MB",
+      review:
+        "Perfect for families! My kids loved playing in the calm water, and we had a great picnic by the shore.",
+      rating: 5,
+    },
+  ];
   return (
     <div>
       <div className="max-w-3xl mx-auto p-6 bg-white rounded-lg shadow-md">
