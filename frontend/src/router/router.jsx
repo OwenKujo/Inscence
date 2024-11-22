@@ -21,6 +21,7 @@ import PinPage from "../page/community/PinPage";
 import { UserProvider } from "../context/UserContext"; // Import UserProvider
 import Account from "../page/AccountProfile";
 import UserProfile from "../page/UserProfile";
+import ComingSoon from "../components/ComingSoon";
 
 
 const router = createBrowserRouter([
@@ -214,6 +215,54 @@ const router = createBrowserRouter([
             <UserProvider>
               <PinProvider>
                 <PinPage />
+              </PinProvider>
+            </UserProvider>
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: "/My_Cherie_Amour",
+        element: (
+          <ProtectedRoute>
+            <UserProvider>
+              <PinProvider>
+                <ComingSoon/>
+              </PinProvider>
+            </UserProvider>
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: "/lhanma",
+        element: (
+          <ProtectedRoute>
+            <UserProvider>
+              <PinProvider>
+                <ComingSoon/>
+              </PinProvider>
+            </UserProvider>
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: "/lovedestiny",
+        element: (
+          <ProtectedRoute>
+            <UserProvider>
+              <PinProvider>
+                <ComingSoon/>
+              </PinProvider>
+            </UserProvider>
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: "/OneRoad",
+        element: (
+          <ProtectedRoute>
+            <UserProvider>
+              <PinProvider>
+                <ComingSoon/>
               </PinProvider>
             </UserProvider>
           </ProtectedRoute>

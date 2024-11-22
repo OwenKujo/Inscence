@@ -1,8 +1,9 @@
 import React from 'react'
+import ComingSoon from '../components/ComingSoon'
 
 const Search = () => {
   return (
-    <div>Search</div>
+    <div><ComingSoon/></div>
   )
 }
 

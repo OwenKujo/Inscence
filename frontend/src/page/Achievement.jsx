@@ -5,8 +5,8 @@ const AchievementScreen = () => {
 
     const achievements = [
         {
-            title: "Share with your friends! (3/3)",
-            description: "To post and share your journey in our community.",
+            title: "Registration Successful (1/1)",
+            description: "You have successfully completed your registration.",
             completed: true,
         },
         {
@@ -54,8 +54,8 @@ const AchievementScreen = () => {
                             <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-20 h-20 bg-yellow-400 rounded-full border-4 border-black flex items-center justify-center">
                                 <span className="text-3xl font-bold text-white">🏆</span>
                             </div>
-                            <h3 className="text-xl font-bold mt-12 mb-4">Share with your friends! (3/3)</h3>
-                            <p className="text-gray-600 mb-6">To post and share your journey in our community.</p>
+                            <h3 className="text-xl font-bold mt-12 mb-4">Registration Successful (1/1)</h3>
+                            <p className="text-gray-600 mb-6">You have successfully completed your registration.</p>
                             <button 
                                 onClick={() => setIsModalOpen(false)}
                                 className="bg-yellow-500 text-white px-6 py-2 rounded-md font-bold hover:bg-yellow-600"
