@@ -43,7 +43,7 @@ const Laem_Ka_Beach = () => {
   ];
   return (
     <div>
-      <div className="max-w-3xl mx-auto p-6 bg-white rounded-lg shadow-md">
+      <div className="max-w-3xl mt-10 mx-auto p-6 bg-white rounded-lg shadow-md">
         {/* Header */}
         <div className="text-center">
           <h1 className="text-2xl font-bold">Laem Ka Beach</h1>
