@@ -1,0 +1,39 @@
+[
+    {
+      "title": "Login Streak ",
+      "description": "You logged in 3 times in one day!",
+      "completed": false,
+      "count": 2,
+      "goal": 3,
+      "type": "login",
+      "color": "#E9A319"
+    },
+    {
+      "title": "Registration Successful",
+      "description": "You have successfully completed your registration.",
+      "completed": true,
+      "count": 1,
+      "goal": 1,
+      "type": "register",
+      "color": "#E9A319"
+    },
+    {
+        "title": "Take a shot with important scene of Red envelop!!",
+        "description": "Red Envelop lover!",
+        "completed": false,
+        "count": 1,
+        "goal": 2,
+        "type": "takeashot",
+        "color" : "#8E1616"
+      },
+      {
+        "title": "Take a shot with the sea!! ",
+        "description": "Sea lover!",
+        "completed": false,
+        "count": 1,
+        "goal": 2,
+        "type": "takeashot",
+        "color" : "#60B5FF"
+      }
+  ]
+  

@@ -4,6 +4,7 @@ import Home from "../page/Home";
 import Community from "../page/Community";
 import Search from "../page/Search";
 import Messages from "../page/Messages";
+import LessonMap from "../page/LessonMap";
 import Profile from "../page/AccountProfile";
 import My_favorite from "../page/page_of_recommend/My_favorite";
 import About_You_test from "../page/page_of_recommend/About_You_test";
@@ -22,6 +23,7 @@ import { UserProvider } from "../context/UserContext"; // Import UserProvider
 import Account from "../page/AccountProfile";
 import UserProfile from "../page/UserProfile";
 import ComingSoon from "../components/ComingSoon";
+
 
 
 const router = createBrowserRouter([
@@ -95,6 +97,18 @@ const router = createBrowserRouter([
             <UserProvider>
               <PinProvider>
                 <Account/>
+              </PinProvider>
+            </UserProvider>
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: "/lessonmap",
+        element: (
+          <ProtectedRoute>
+            <UserProvider>
+              <PinProvider>
+                <LessonMap/>
               </PinProvider>
             </UserProvider>
           </ProtectedRoute>

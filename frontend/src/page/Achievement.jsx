@@ -1,70 +1,143 @@
 import React, { useState } from 'react';
+import initialAchievements from '../components/testjson/achievement.json'; 
 
 const AchievementScreen = () => {
+    const [achievements, setAchievements] = useState(initialAchievements);
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [activeAchievement, setActiveAchievement] = useState(null);
+    const incrementAchievementCount = () => {
+        const updated = achievements.map(ach => {
+            if (ach.title === activeAchievement.title) {
+                const newCount = ach.count + 1;
+                return {
+                    ...ach,
+                    count: newCount,
+                    completed: newCount >= ach.goal
+                };
+            }
+            return ach;
+        });
+    
+        setAchievements(updated);
 
-    const achievements = [
-        {
-            title: "Registration Successful (1/1)",
-            description: "You have successfully completed your registration.",
-            completed: true,
-        },
-        {
-            title: "Check in followed Thai Series! (1/3)",
-            description: "You followed the location of Thai series and share with us!",
-            completed: false,
-        },
-        {
-            title: "Check in followed BL Series! (1/3)",
-            description: "You followed the location of Thai Boy Love series and share with us!",
-            completed: false,
-        },
-    ];
+        const updatedActive = updated.find(ach => ach.title === activeAchievement.title);
+        setActiveAchievement(updatedActive);
+    };
+    const simulateLogin = () => {
+        const updated = achievements.map(ach => {
+            if (ach.type === 'login' && !ach.completed) {
+                const newCount = ach.count + 1;
+                return {
+                    ...ach,
+                    count: newCount,
+                    completed: newCount >= ach.goal
+                };
+            }
+            return ach;
+        });
+        setAchievements(updated);
+    };
 
     return (
-        <div className="min-h-screen font-body bg-gray-100 flex items-center justify-center p-4">
-            <div className="max-w-md w-full">
-                <h2 className="text-center text-2xl font-semibold mb-4">Achievement 1</h2>
-                <p className="text-center font-medium text-gray-500 mb-8">Super Community Fan</p>
-                
-                <div className="space-y-4">
-                    {achievements.map((achievement, index) => (
-                        <div 
-                            key={index} 
-                            onClick={() => achievement.completed && setIsModalOpen(true)}
-                            className={`p-4 rounded-lg shadow-md cursor-pointer ${achievement.completed ? 'bg-blue-400' : 'bg-white'}`}
-                        >
-                            <div className="flex items-center">
-                                <span 
-                                    className={`inline-block w-8 h-8 rounded-full p-4 mr-4 ${achievement.completed ? 'bg-yellow-400' : 'bg-gray-400'}`}
-                                ></span>
-                                <div>
-                                    <p className="font-bold">{achievement.title}</p>
-                                    <p className="text-sm text-gray-600">{achievement.description}</p>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
+        <div className="min-h-screen bg-gradient-to-br from-yellow-100 to-white py-10 px-4 mt-15">
+            <div className="max-w-2xl mx-auto">
+                <h1 className="text-4xl font-extrabold text-center text-blue-700 mb-2 mt-20">🎯 Your Achievements</h1>
+                <p className="text-center text-gray-600 mb-10">Track your progress and unlock new badges!</p>
+
+                <div className="grid gap-6">
+                {achievements.map((achievement, index) => {
+    const progressPercent = Math.min((achievement.count / achievement.goal) * 100, 100);
+
+    return (
+        <div 
+            key={index}
+            onClick={() =>  (() => {
+                setActiveAchievement(achievement);
+                setIsModalOpen(true);
+            })()}
+            className={`transition-shadow p-5 rounded-xl shadow-md hover:shadow-xl cursor-pointer bg-white border-l-4`}
+            style={{ borderLeftColor: achievement.color }}
+        >
+            <div className="flex items-center space-x-4">
+                <div
+                    className="w-14 h-14 flex items-center justify-center rounded-full text-2xl font-bold text-white"
+                    style={{ backgroundColor: achievement.color }}
+                >
+                    {achievement.completed ? '🏆' : '🔓'}
+                </div>
+                <div className="flex-1">
+                    <h3 className="font-semibold text-lg text-gray-800">
+                        {achievement.title} ({achievement.count}/{achievement.goal})
+                    </h3>
+                    <p className="text-sm text-gray-500">{achievement.description}</p>
+                    <div className="w-full bg-gray-200 h-2 rounded-full mt-2">
+                        <div
+                            className="h-full rounded-full"
+                            style={{ width: `${progressPercent}%`, backgroundColor: achievement.color }}
+                        ></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+})}
+
                 </div>
 
+               
+
                 {/* Modal */}
-                {isModalOpen && (
-                    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-                        <div className="bg-white p-6 rounded-lg shadow-lg w-80 text-center relative">
-                            <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-20 h-20 bg-yellow-400 rounded-full border-4 border-black flex items-center justify-center">
-                                <span className="text-3xl font-bold text-white">🏆</span>
-                            </div>
-                            <h3 className="text-xl font-bold mt-12 mb-4">Registration Successful (1/1)</h3>
-                            <p className="text-gray-600 mb-6">You have successfully completed your registration.</p>
-                            <button 
-                                onClick={() => setIsModalOpen(false)}
-                                className="bg-yellow-500 text-white px-6 py-2 rounded-md font-bold hover:bg-yellow-600"
-                            >
-                                Share
-                            </button>
-                        </div>
-                    </div>
-                )}
+                {isModalOpen && activeAchievement && (
+    activeAchievement.completed ? (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+            <div className="bg-white p-6 rounded-xl shadow-2xl w-[90%] max-w-sm text-center animate-fade-in">
+                <div
+                    className="w-20 h-20 mx-auto rounded-full border-4 border-black flex items-center justify-center mb-4 text-white text-4xl"
+                    style={{ backgroundColor: activeAchievement.color }}
+                >
+                    🏆
+                </div>
+                <h3 className="text-2xl font-bold mb-2">{activeAchievement.title} ({activeAchievement.count}/{activeAchievement.goal})</h3>
+                <p className="text-gray-600 mb-6">{activeAchievement.description}</p>
+                <button
+                    onClick={() => setIsModalOpen(false)}
+                    className="hover:bg-yellow-600 text-white px-5 py-2 rounded-lg font-semibold"
+                    style={{ backgroundColor: activeAchievement.color }}
+                >
+                    Receive Reward!!
+                </button>
+            </div>
+        </div>
+    ) : (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+            <div className="bg-white p-6 rounded-xl shadow-2xl w-[90%] max-w-sm text-center animate-fade-in">
+                <div
+                    className="w-20 h-20 mx-auto rounded-full border-4 border-black flex items-center justify-center mb-4 text-white text-4xl"
+                    style={{ backgroundColor: activeAchievement.color }}
+                >
+                    🔓
+                </div>
+                <h3 className="text-2xl font-bold mb-2">{activeAchievement.title} ({activeAchievement.count}/{activeAchievement.goal})</h3>
+                <p className="text-gray-600 mb-6">{activeAchievement.description}</p>
+                <button
+                    onClick={() => setIsModalOpen(false)}
+                    className="hover:bg-yellow-600 text-white px-5 py-2 rounded-lg font-semibold"
+                    style={{ backgroundColor: activeAchievement.color }}
+                >
+                    Close
+                </button>
+                <button
+                    onClick={incrementAchievementCount}
+                    className="hover:bg-yellow-600 text-white px-5 py-2 rounded-lg font-semibold ml-5"
+                    style={{ backgroundColor: activeAchievement.color }}
+                >
+                    Add one
+                </button>
+            </div>
+        </div>
+    )
+)}
+
             </div>
         </div>
     );
