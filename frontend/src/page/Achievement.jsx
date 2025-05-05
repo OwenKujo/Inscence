@@ -39,10 +39,10 @@ const AchievementScreen = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-yellow-100 to-white py-10 px-4 mt-15">
+        <div className="min-h-screen bg-gradient-to-br from-blue-100 to-white py-10 px-4 mt-15">
             <div className="max-w-2xl mx-auto">
-                <h1 className="text-4xl font-extrabold text-center text-blue-700 mb-2 mt-20">🎯 Your Achievements</h1>
-                <p className="text-center text-gray-600 mb-10">Track your progress and unlock new badges!</p>
+                <h1 className="text-4xl font-extrabold text-center text-red-500 mb-2 mt-20">🎯 FanClub Achievements!</h1>
+                <p className="text-center text-gray-600 mb-10">You are the top fan of Thailand!</p>
 
                 <div className="grid gap-6">
                 {achievements.map((achievement, index) => {
